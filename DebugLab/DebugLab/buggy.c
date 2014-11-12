@@ -28,8 +28,8 @@
 #define false                 0
 
 #define DEFAULT_FILE          "names.txt"
-#define INIT_LINE             10
-#define INIT_NAMES            10
+#define INIT_LINE             5
+#define INIT_NAMES            3
 
 #define E_NO_ERROR            0
 #define E_FILE_ERROR          1
