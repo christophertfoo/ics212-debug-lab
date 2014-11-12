@@ -272,9 +272,9 @@ int readfile(char file[], struct namelist *pList)
                     }
                 }
             }
-            fclose(fp);
         }
     }
+	fclose(fp);
     return returnCode;
 }
 
