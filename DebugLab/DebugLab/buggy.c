@@ -82,7 +82,7 @@ int main(int argc, char **argv)
     char running;
     int errorCode, returnCode;
     struct namelist list;
-    char *line, *lastChar;
+    char *line, *pLastChar;
     char *file = argc > 1 ? argv[1] : DEFAULT_FILE;
     char command[6] = "";
 
@@ -107,15 +107,15 @@ int main(int argc, char **argv)
             fgets(command, 6, stdin);
 
             /* Clear the buffer if there is extra stuff */
-            lastChar = &command[strlen(command) - 1];
-            if (*lastChar != '\n')
+			pLastChar = &command[strlen(command) - 1];
+            if (*pLastChar != '\n')
             {
                 while (getchar() != '\n')
                     ;
             }
             else
             {
-                *lastChar = '\0';
+                *pLastChar = '\0';
             }
 
             printf("\n");
