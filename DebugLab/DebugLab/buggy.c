@@ -592,9 +592,9 @@ int cleanup(struct namelist *pList)
     {
         for (i = 0; i < pList->num_names; i++)
         {
-            free(pList->names[i]);
+            free(&pList->names[i]);
         }
-        free(pList->names);
+        free(&pList->names);
 
         pList->names = NULL;
         pList->num_names = 0;
