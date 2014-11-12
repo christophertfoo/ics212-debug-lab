@@ -1,0 +1,52 @@
+ICS 212 Debugging Lab Instructions
+
+1. Contents of the Archive:
+   - Instructions.txt = 
+         Instructions for this exercise in plain text format.
+
+   - buggy.c = 
+         C source code for the name database program that shall
+         be debugged in this exercise.
+
+   - namelist.exe =
+         Executable of the name database without the bugs.  Included
+         in the even that you want to see how it should function.
+
+2. Instructions:
+    1. Open Visual Studio
+    2. Create a new project
+       - File -> New -> Project -> New Project wizard should open
+       - Visual C++ -> Win32 -> Win32 Console Application
+           - Enter the name of your project.  Probably something like "ICS212DebugExercise"
+           - Click OK -> Win32 Application Wizard should open
+       - Click Next or Application Settings -> Check Empty project -> Click Finish
+    3. Import the buggy.c file into the project
+       - In the Solution Explorer -> Right click the Source Files folder -> Add -> Existing Item
+       - This should bring up a file browser.  Look for the buggy.c file, select it, and click Add
+    4. Compile the code
+       - Build -> Build Solution
+       - Shortcut = F7
+       - There should not be any errors or warnings
+    5. Debugging the program
+       - Click the green arrow
+       - Shortcut = F5
+       - IMPORTANT: Make sure that it says Debug by the green arrow, not Release
+       - Running programs with command line arguments
+         - Right click the project in the Solution Explorer (NOT the solution, the project should be one level below the solution)
+         - Properties -> Configuration Properties -> Debugging -> Command Arguments
+         - Put your command line arguments there, separated by spaces
+    6. Submission Requirements
+       - A file in txt / doc / pdf format with the following:
+         - Names of all group members
+         - For each bug answer the following
+           - What was the bug in terms of the code and where was it? 
+             - Ex. The function dummy tries to get the i-th element of the array pArray which is initialized to NULL,
+                   but never set to point to an actual array.  This causes a dereference on a NULL pointer.
+           - How did the bug manifest itself / what did it do to the functionality of the program?
+             - Ex. Causes a segmentation fault immediately when the program is started.
+           - How do you fix the bug?  Provide code if possible.
+             - Ex. Allocate memory for the array and set pArray to the allocate memory using the following line
+                   of code so that the dereference is valid.
+
+                   pArray = (int *) malloc(sizeof(int) * 10);
+	      
