@@ -138,8 +138,8 @@ int main(int argc, char **argv)
                     if (errorCode != E_NO_ERROR)
                     {
                         printf("Error: Could not add the name.\n");
-                        free(line);
                     }
+                    free(line);
                 }
             }
 
@@ -274,7 +274,7 @@ int readfile(char file[], struct namelist *pList)
             }
         }
     }
-	fclose(fp);
+    fclose(fp);
     return returnCode;
 }
 
