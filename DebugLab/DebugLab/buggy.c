@@ -364,7 +364,7 @@ int addname(struct namelist *pList, char *name)
         /* Initialize the empty list */
         if (pList->capacity == 0)
         {
-            pList->names = (char **) malloc(sizeof(char *) * INIT_NAMES);
+            pList->names = (char **) malloc(sizeof(char) * INIT_NAMES);
             if (pList->names == NULL)
             {
                 returnCode = E_MEM_ERROR;
@@ -378,7 +378,7 @@ int addname(struct namelist *pList, char *name)
         /* Resize if not empty and ran out of space */
         else if (pList->num_names >= pList->capacity)
         {
-            temp = (char **) malloc(sizeof(char *) * pList->capacity * 2);
+            temp = (char **) malloc(sizeof(char) * pList->capacity * 2);
 
             /* Could not allocate the new array, error */
             if (temp == NULL)
