@@ -101,6 +101,7 @@ int main(int argc, char **argv)
             printf("  add:   Add a name to the list\n");
             printf("  print: Print all names\n");
             printf("  find:  Finds all names that contain the given string\n");
+            printf("  clear: Empties the list\n");
             printf("  quit:  Exit the program\n");
             printf(">");
 
@@ -164,6 +165,12 @@ int main(int argc, char **argv)
                     findnames(&list, line);
                     free(line);
                 }
+            }
+
+            /* Clear */
+            else if(strncmp(command, "clear", 6) == 0)
+            {
+                cleanup(&list);
             }
 
             /* Quit */
