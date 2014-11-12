@@ -312,7 +312,7 @@ int writefile(char file[], struct namelist *pList)
     }
     else
     {
-        fp = fopen(file, "w");
+        fp = fopen(file, (char *) 'w');
         if (fp == NULL)
         {
             returnCode = E_FILE_ERROR;
