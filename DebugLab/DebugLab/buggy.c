@@ -433,7 +433,7 @@ int printnames(struct namelist *pList)
     else
     {
         printf("Printing all %d names:\n", pList->num_names);
-        for (i = 0; i < pList->num_names; i++)
+        for (i = 0; i <= pList->num_names; i++)
         {
             printf("  [%d] %s\n", i + 1, pList->names[i]);
         }
