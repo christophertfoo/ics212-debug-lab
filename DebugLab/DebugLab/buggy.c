@@ -107,7 +107,7 @@ int main(int argc, char **argv)
 
             fgets(command, 6, stdin);
 
-            /* Clear the buffer if there is extra stuff */
+            /* Clear the buffer if there is extra stuff, otherwise remove the newline */
             pLastChar = &command[strlen(command) - 1];
             if (*pLastChar != '\n')
             {
