@@ -1,20 +1,20 @@
 /*****************************************************************
- *
- *  NAME:          Christopher Foo
- *
- *  HOMEWORK:      N/A
- *
- *  CLASS:         ICS 212
- *
- *  INSTRUCTOR:    Ravi Narayan
- *
- *  DATE:          November 10, 2014
- *
- *  FILE:          buggy.c
- *
- *  DESCRIPTION:   A simple, but buggy name database program.
- *
- *****************************************************************/
+*
+*  NAME:          Christopher Foo
+*
+*  HOMEWORK:      N/A
+*
+*  CLASS:         ICS 212
+*
+*  INSTRUCTOR:    Ravi Narayan
+*
+*  DATE:          November 10, 2014
+*
+*  FILE:          buggy.c
+*
+*  DESCRIPTION:   A simple, but buggy name database program.
+*
+*****************************************************************/
 
 /* Disable security warnings raised by standard C library functions */
 #define _CRT_SECURE_NO_WARNINGS
@@ -56,27 +56,27 @@ char *readline(FILE *fp);
 int cleanup(struct namelist *pList);
 
 /*****************************************************************
- *
- *  Function name:      main
- *
- *  DESCRIPTION:        Runs the user interface for the name database program.
- *
- *  Parameters:
- *          int argc
- *              The number of command line arguments including
- *              the name of the program.
- *
- *          char ** argv
- *              The command line arguments.  Uses one optional
- *              command line argument which is the name of the
- *              file to read from / write to.
- *
- *  Return values:
- *          E_NO_ERROR   (0) = No error
- *          E_FILE_ERROR (1) = Failed to open the database file
- *          E_MEM_ERROR  (3) = Failed to allocate memory, program aborted
- *
- *****************************************************************/
+*
+*  Function name:      main
+*
+*  DESCRIPTION:        Runs the user interface for the name database program.
+*
+*  Parameters:
+*          int argc
+*              The number of command line arguments including
+*              the name of the program.
+*
+*          char ** argv
+*              The command line arguments.  Uses one optional
+*              command line argument which is the name of the
+*              file to read from / write to.
+*
+*  Return values:
+*          E_NO_ERROR   (0) = No error
+*          E_FILE_ERROR (1) = Failed to open the database file
+*          E_MEM_ERROR  (3) = Failed to allocate memory, program aborted
+*
+*****************************************************************/
 int main(int argc, char **argv)
 {
     char running;
@@ -107,7 +107,7 @@ int main(int argc, char **argv)
             fgets(command, 6, stdin);
 
             /* Clear the buffer if there is extra stuff */
-			pLastChar = &command[strlen(command) - 1];
+            pLastChar = &command[strlen(command) - 1];
             if (*pLastChar != '\n')
             {
                 while (getchar() != '\n')
@@ -196,27 +196,27 @@ int main(int argc, char **argv)
 }
 
 /*****************************************************************
- *
- *  Function name:      readfile
- *
- *  DESCRIPTION:        Reads the names from the provided database file
- *                      into the given list.
- *
- *  Parameters:
- *          char file[]
- *              The name of the file to read from.
- *
- *          struct namelist *pList
- *              A pointer to the namelist struct that the names should
- *              be read into.
- *
- *  Return values:
- *          E_NO_ERROR      (0) = No error
- *          E_FILE_ERROR    (1) = Failed to open the database file
- *          E_ARGUMENT_ERROR(2) = NULL parameter
- *          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
- *
- *****************************************************************/
+*
+*  Function name:      readfile
+*
+*  DESCRIPTION:        Reads the names from the provided database file
+*                      into the given list.
+*
+*  Parameters:
+*          char file[]
+*              The name of the file to read from.
+*
+*          struct namelist *pList
+*              A pointer to the namelist struct that the names should
+*              be read into.
+*
+*  Return values:
+*          E_NO_ERROR      (0) = No error
+*          E_FILE_ERROR    (1) = Failed to open the database file
+*          E_ARGUMENT_ERROR(2) = NULL parameter
+*          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
+*
+*****************************************************************/
 int readfile(char file[], struct namelist *pList)
 {
     unsigned int i;
@@ -272,27 +272,27 @@ int readfile(char file[], struct namelist *pList)
 }
 
 /*****************************************************************
- *
- *  Function name:      writefile
- *
- *  DESCRIPTION:        Writes the names from the given list into
- *                      a file with the given name.
- *
- *  Parameters:
- *          char file[]
- *              The name of the file to write to.
- *
- *          struct namelist *pList
- *              A pointer to the namelist struct that contains the
- *              names to be written.
- *
- *  Return values:
- *          E_NO_ERROR      (0) = No error
- *          E_FILE_ERROR    (1) = Failed to open the database file
- *          E_ARGUMENT_ERROR(2) = NULL parameter
- *          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
- *
- *****************************************************************/
+*
+*  Function name:      writefile
+*
+*  DESCRIPTION:        Writes the names from the given list into
+*                      a file with the given name.
+*
+*  Parameters:
+*          char file[]
+*              The name of the file to write to.
+*
+*          struct namelist *pList
+*              A pointer to the namelist struct that contains the
+*              names to be written.
+*
+*  Return values:
+*          E_NO_ERROR      (0) = No error
+*          E_FILE_ERROR    (1) = Failed to open the database file
+*          E_ARGUMENT_ERROR(2) = NULL parameter
+*          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
+*
+*****************************************************************/
 int writefile(char file[], struct namelist *pList)
 {
     unsigned int i;
@@ -324,25 +324,25 @@ int writefile(char file[], struct namelist *pList)
 }
 
 /*****************************************************************
- *
- *  Function name:      addname
- *
- *  DESCRIPTION:        Adds the given name to the given list.
- *
- *  Parameters:
- *          struct namelist *pList
- *              A pointer to the namelist struct that the name should
- *              be added to.
- *
- *          char *name
- *              The name to be added.
- *
- *  Return values:
- *          E_NO_ERROR      (0) = No error
- *          E_ARGUMENT_ERROR(2) = NULL parameter
- *          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
- *
- *****************************************************************/
+*
+*  Function name:      addname
+*
+*  DESCRIPTION:        Adds the given name to the given list.
+*
+*  Parameters:
+*          struct namelist *pList
+*              A pointer to the namelist struct that the name should
+*              be added to.
+*
+*          char *name
+*              The name to be added.
+*
+*  Return values:
+*          E_NO_ERROR      (0) = No error
+*          E_ARGUMENT_ERROR(2) = NULL parameter
+*          E_MEM_ERROR     (3) = Failed to allocate memory, execution aborted
+*
+*****************************************************************/
 int addname(struct namelist *pList, char *name)
 {
     char **temp;
@@ -401,20 +401,20 @@ int addname(struct namelist *pList, char *name)
 }
 
 /*****************************************************************
- *
- *  Function name:      printnames
- *
- *  DESCRIPTION:        Prints all of the names in the given list.
- *
- *  Parameters:
- *          struct namelist *pList
- *              A pointer to the namelist struct that should be printed.
- *
- *  Return values:
- *          E_NO_ERROR      (0) = No error
- *          E_ARGUMENT_ERROR(2) = NULL parameter
- *
- *****************************************************************/
+*
+*  Function name:      printnames
+*
+*  DESCRIPTION:        Prints all of the names in the given list.
+*
+*  Parameters:
+*          struct namelist *pList
+*              A pointer to the namelist struct that should be printed.
+*
+*  Return values:
+*          E_NO_ERROR      (0) = No error
+*          E_ARGUMENT_ERROR(2) = NULL parameter
+*
+*****************************************************************/
 int printnames(struct namelist *pList)
 {
     unsigned int i;
@@ -435,24 +435,24 @@ int printnames(struct namelist *pList)
 }
 
 /*****************************************************************
- *
- *  Function name:      findnames
- *
- *  DESCRIPTION:        Prints all names in the given list that contain the
- *                      given substring.
- *
- *  Parameters:
- *          struct namelist *pList
- *              A pointer to the namelist struct that should be searched.
- *
- *          char *substring
- *              The substring to search for.
- *
- *  Return values:
- *          E_NO_ERROR      (0) = No error
- *          E_ARGUMENT_ERROR(2) = NULL parameter
- *
- *****************************************************************/
+*
+*  Function name:      findnames
+*
+*  DESCRIPTION:        Prints all names in the given list that contain the
+*                      given substring.
+*
+*  Parameters:
+*          struct namelist *pList
+*              A pointer to the namelist struct that should be searched.
+*
+*          char *substring
+*              The substring to search for.
+*
+*  Return values:
+*          E_NO_ERROR      (0) = No error
+*          E_ARGUMENT_ERROR(2) = NULL parameter
+*
+*****************************************************************/
 int findnames(struct namelist *pList, char *substring)
 {
     unsigned int i;
@@ -484,23 +484,23 @@ int findnames(struct namelist *pList, char *substring)
 }
 
 /*****************************************************************
- *
- *  Function name:      readline
- *
- *  DESCRIPTION:        Reads a full line from the given FILE * and
- *                      returns a pointer to the string containing
- *                      the line.  This line is allocated using
- *                      heap memory and MUST be freed.
- *
- *  Parameters:
- *          FILE *fp
- *              The file to read from.
- *
- *  Return values:
- *          A pointer to the string containing the line of input
- *          or NULL if an error occurred.
- *
- *****************************************************************/
+*
+*  Function name:      readline
+*
+*  DESCRIPTION:        Reads a full line from the given FILE * and
+*                      returns a pointer to the string containing
+*                      the line.  This line is allocated using
+*                      heap memory and MUST be freed.
+*
+*  Parameters:
+*          FILE *fp
+*              The file to read from.
+*
+*  Return values:
+*          A pointer to the string containing the line of input
+*          or NULL if an error occurred.
+*
+*****************************************************************/
 char *readline(FILE *fp)
 {
     char *line, *temp, input;
@@ -559,20 +559,20 @@ char *readline(FILE *fp)
 }
 
 /*****************************************************************
- *
- *  Function name:      cleanup
- *
- *  DESCRIPTION:        Empties the given list.
- *
- *  Parameters:
- *          struct namelist *pList
- *              The list to be emptied.
- *
- *  Return values:
- *          E_NO_ERROR       (0) = No error
- *          E_ARGUMENT_ERROR (1) = NULL parameter
- *
- *****************************************************************/
+*
+*  Function name:      cleanup
+*
+*  DESCRIPTION:        Empties the given list.
+*
+*  Parameters:
+*          struct namelist *pList
+*              The list to be emptied.
+*
+*  Return values:
+*          E_NO_ERROR       (0) = No error
+*          E_ARGUMENT_ERROR (1) = NULL parameter
+*
+*****************************************************************/
 int cleanup(struct namelist *pList)
 {
     unsigned int i;
