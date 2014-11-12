@@ -83,7 +83,7 @@ int main(int argc, char **argv)
     int errorCode, returnCode;
     struct namelist list;
     char *line, *pLastChar;
-    char *file = argc > 1 ? argv[1] : DEFAULT_FILE;
+    char *file = argc > 1 ? argv[0] : DEFAULT_FILE;
     char command[6] = "";
 
     returnCode = E_NO_ERROR;
